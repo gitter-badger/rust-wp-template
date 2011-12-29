@@ -249,8 +249,10 @@ body>section h1 {
     font-family: 'NeuropolXFree';
 }
 body>section h2 {
+    font-size: 16px;
     color: #fff;
-    font-size: 18px;
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
 }
 h2.widgettitle {
     font-family: 'NeuropolXFree';
@@ -302,7 +304,8 @@ body>nav {
 			}
 
     
-nav {
+
+body>nav {
     font-family: 'NeuropolXFree';
     font-size: 18px;
 	overflow: hidden;
@@ -535,4 +538,63 @@ input:hover, input:focus {
 /*hax*/
 .newsletter p {
   display: inline;
+}
+
+/*news page*/
+
+span.day {
+    font-family: 'NeuropolXFree';
+    color: #9f811f;
+    font-size: 16px;
+    text-shadow: #000 1px 1px;
+    
+
+    background: #242018;
+    border-top: 1px solid #331;
+    border-right: 2px solid #331;
+    box-shadow: 0px 0px 8px #000;
+    border-radius: 5px;    
+    opacity: 0.8;
+    
+    display: block;
+    float: left;
+    
+    width: 46px;
+    height: 22px;
+    margin: 4px 10px 4px 8px;
+    padding: 2px 1px 0px 1px;
+    text-align: center;
+}
+a:hover span.day {
+    color: #fff;
+    box-shadow: 0px 0px 8px #9f811f;
+}
+
+nav p.pageturn {
+    font-family: 'NeuropolXFree';
+    text-align: right;
+    padding: 20px 5px;
+    font-size: 14px;
+}
+nav p.pageturn span {
+    display: block;
+    float: left;
+}
+
+
+article>section p.small, article>footer p.small {
+    padding: 0px;
+    margin: 0px 0px 0px 70px;
+}
+article>footer p.small {
+    font-size: 10px;
+}
+article>section p.small{
+    color: #fff;
+    font-size: 12px;
+}
+
+h1.month span {
+    color: #888;
+    font-size: 16px;
 }
