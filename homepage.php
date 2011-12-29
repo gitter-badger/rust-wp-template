@@ -12,6 +12,11 @@ Template Name: HomePage
 <header>
 <h1>Latest Stories from The Outpost</h1>
 </header>
+       
+<?include (ABSPATH . '/wp-content/plugins/coin-slider-4-wp/coinslider.php'); ?>    
+    
+<?php /*    
+    
 <div id='coin-slider'>
 <a href='http://apogaea.dreamhosters.com/?p=1812'>	
   <img src='http://apogaea.dreamhosters.com/wp-content/uploads/2011/12/ApogaeaSplash2.jpg' />
@@ -42,6 +47,8 @@ Template Name: HomePage
 	}); 
 
 </script>
+
+*/ ?>
 </article>
 
 <article>

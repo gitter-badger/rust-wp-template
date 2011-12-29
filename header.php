@@ -8,7 +8,6 @@
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
 		<script src="<?php bloginfo('template_directory'); ?>/javascript/jquery-1.7.min.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/coinslider/coin-slider.min.js"></script>
 
 
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
@@ -28,10 +27,8 @@
 */ 
 		?>
 
-		<script src="<?php bloginfo('template_directory'); ?>/javascript/h5.js"></script>
-
-
 		<?php wp_head(); ?>
+		<script src="<?php bloginfo('template_directory'); ?>/javascript/h5.js"></script>
 
 
 	</head>
