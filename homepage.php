@@ -10,7 +10,7 @@ Template Name: HomePage
 <section>
 <article>
 <header>
-<h1>Latest Stories from The Outpost</h1>
+<h1>Featured Outpost Editorials</h1>
 </header>
        
 <?include (ABSPATH . '/wp-content/plugins/coin-slider-4-wp/coinslider.php'); ?>    

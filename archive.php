@@ -1,15 +1,15 @@
 <?php get_header(); ?>
 
 		<section>
-
-		<?php if (have_posts()) : ?>
+	   	<?php if (have_posts()) : ?>
+          <article><header>
 
 			<?php $post = $posts[0]; // hack: set $post so that the_date() works ?>
 			<?php if (is_category()) { ?>
-			<h1>Archive for the &ldquo;<?php single_cat_title(); ?>&rdquo; Category</h1>
+			<h1>Category Archive:<?php single_cat_title(); ?></h1>
 
 			<?php } elseif(is_tag()) { ?>
-			<h1>Posts Tagged &ldquo;<?php single_tag_title(); ?>&rdquo;</h1>
+			<h1>Posts Tagged: <?php single_tag_title(); ?></h1>
 
 			<?php } elseif (is_day()) { ?>
 			<h1>Archive for <?php the_time('F jS, Y'); ?></h1>
@@ -25,28 +25,33 @@
 
 			<?php } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
 			<h1>Blog Archives</h1>
-
+         </header>
 		<?php } ?>
-		<?php while (have_posts()) : the_post(); ?>
+	
+			<?php  while (have_posts()) : the_post(); ?>
+			    
+			    			   
+                
+				<article id="post-<?php the_ID(); ?>">
+					<header>
+						<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Read: <?php the_title_attribute(); ?>"><span class="day""><?php the_time('j'); ?><sup><?php the_time('S'); ?></sup><span><?php the_time('M'); ?></span></span><?php the_title(); ?></a></h2>					
+					</header>
+		                            <section>
+		                                
+		                            <p class="small""><?php the_excerpt_max_charlength(80); ?> <a href="<?php the_permalink() ?>" rel="bookmark" title="Read: <?php the_title_attribute(); ?>">&#8230;</a></p>
+		                            </section>
+					<footer>
+						<p class="small"">Posted in <?php the_category(', '); ?> by <?php the_author(); ?> &bull; <?php the_tags('Tagged: ', ', ', '&bull;'); ?> <?php edit_post_link('Edit', '', ' &bull; '); ?> <?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
+					</footer>
+				</article>
 
-			<article id="post-<?php the_ID(); ?>">
-				<header>
-					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-					<p>Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></p>
-				</header>
-				<section>
-					<?php the_excerpt(); ?>
-
-				</section>
-				<footer>
-					<p><?php the_tags('Tags: ', ', ', '<br>'); ?> Posted in <?php the_category(', '); ?> &bull; <?php edit_post_link('Edit', '', ' &bull; '); ?> <?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
-				</footer>
+				<?php endwhile; ?>
 			</article>
-
-			<?php endwhile; ?>
-
+                
 			<nav>
-				<p><?php posts_nav_link('&nbsp;&bull;&nbsp;'); ?></p>
+                                <p class="pageturn"><span><?php previous_posts_link(); ?></span><?php next_posts_link(); ?></p>
+                                
+                                <?php wp_link_pages(); ?>
 			</nav>
 
 			<?php else : ?>
@@ -57,8 +62,7 @@
 				<?php get_search_form(); ?>
 			</article>
 
-			<?php endif; ?>
-
+			<?php endif; ?>     
 		</section>
 
 <?php get_sidebar(); ?>

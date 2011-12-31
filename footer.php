@@ -7,7 +7,7 @@
 	<ul id="footer-site-map">
 <?php 
 
-$my_pages = wp_list_pages('echo=0&title_li=&depth=2');
+$my_pages = wp_list_pages('echo=0&title_li=&depth=6');
 $var1 = '<a';
 $var2 = '<span class="footer"><a';
 $var3 = '</a>';

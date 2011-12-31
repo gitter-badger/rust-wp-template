@@ -14,8 +14,6 @@ Credits...
 
 */
 
-/* == CoinSlider ==*/
-@import url('coin-slider-styles.css');
 
 /* == FONTS == */
 
@@ -74,7 +72,7 @@ ul {
 
 ul li {
     padding: 0px;
-    margin: 2px 0px 2px 15px;
+    margin: 2px 0px 2px 10px;
 }
 
 
@@ -421,9 +419,13 @@ label[for=s] {
 /* == ALL YOUR CODE ARE BELONG TO POETRY == */
 
 hr {
-    height: 1px;
-    background: #420;
-    border: 0px;
+    height: 6px;
+    background: #420 url('images/hr_back.png') center center repeat-x;
+  background: #9f811f url('images/form_background.png') repeat-x center top;
+    border: 1px solid #E7D07B;
+    margin: 30px;
+    border-radius: 4px;
+    opacity: 0.25;
 }
 
 
@@ -481,14 +483,20 @@ ul#footer-site-map {
   display: inline-block;
 }
 
+ul#footer-site-map ul {
+  margin: 0px 0px 4px 0px;  
+  border-left: 4px solid #440;
+}
+
 ul#footer-site-map  li a {
   font-weight: bold;
   color: #aaa;
   font-size: 12px;
   display: block;
   padding: 1px;
-  margin: 1px 4px;
+  margin: 1px 0px;
   border-bottom: 2px solid #440;
+  border-left: 2px solid #440;
   text-align: center;
 }
 
@@ -508,9 +516,9 @@ ul#footer-site-map  li li {
 ul#footer-site-map  li li a {
   text-align: left;
   font-weight: normal;
-  padding-left: 4px;
+  padding-left: 1px;
   border-bottom: 1px solid #222;
-  border-left: 1px solid #440;
+  border-left: 2px solid #440;
 }
 
 
@@ -535,10 +543,6 @@ input:hover, input:focus {
   margin-left: 2px;
 }
 
-/*hax*/
-.newsletter p {
-  display: inline;
-}
 
 /*news page*/
 
@@ -560,10 +564,21 @@ span.day {
     float: left;
     
     width: 46px;
-    height: 22px;
     margin: 4px 10px 4px 8px;
     padding: 2px 1px 0px 1px;
     text-align: center;
+}
+span.day span {    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: block;
+    text-align: center;
+    padding :1px;
+    font-size: 10px;
+    background: #000;
+    margin: 3px;
+    border-radius: 5px;  
+    border-bottom: 1px solid #331;
+    border-left: 2px solid #331;
+    text-transform: uppercase;  
 }
 a:hover span.day {
     color: #fff;
@@ -597,4 +612,81 @@ article>section p.small{
 h1.month span {
     color: #888;
     font-size: 16px;
+}
+
+
+
+/* Calendar Overrides */
+.tribe-events-month-nav {
+  display: block;
+  border: 1px solid #000;
+  position: static;
+  text-align: center;
+}
+.tribe-events-calendar-buttons {
+  position: static;
+  text-align: center;
+  display: none;
+}
+
+table.tribe-events-calendar {
+  margin: 4px 0 12px !important;
+  border-color: #442;
+}
+
+#tribe-events-calendar-header {
+  height: 30px;
+}
+
+.tribe-events-calendar th {
+  border-color: #331;
+  background: #242018;
+  color:#fff;
+}
+.tribe-events-calendar td {
+  border-color: #331;
+}
+
+table.tribe-events-calendar {
+  border-color: #331;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px #000;
+  border-top: 1px solid #331;
+  border-left: 2px solid #331;
+}
+
+.tribe-events-calendar .daynum, .tribe-events-calendar .daynum a, .tribe-events-calendar td.tribe-events-present .daynum, .tribe-events-calendar td.tribe-events-present .daynum > a {
+  background-color: transparent;
+  color: #E7D07B;
+}
+
+.tribe-events-calendar .tribe-events-tooltip {
+  background: #242018;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #331;
+  border-left: 2px solid #331;
+  padding: 4px 10px;
+  color: #aa8;
+}
+.tribe-events-calendar .tribe-events-tooltip h5.tribe-events-event-title {
+  font-family: 'NeuropolXFree';
+  font-size: 12px;
+  margin: 5px 0px 15px 0px;
+  text-align: center;
+  background-color: #181000;
+  color: #CFA728;
+  color: white;
+  border-radius: 10px;
+  border-bottom: 1px solid #662;
+  border-right: 2px solid #662;
+  box-shadow: -2px -2px 4px #000;
+
+}
+
+/* Newsletter Overrides */
+.newsletter p {
+  display: inline;
 }
