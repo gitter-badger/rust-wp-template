@@ -42,10 +42,8 @@ Credits...
 }
 
 /* == BASICS == */
-
 header, footer, section, article, aside, nav {
 	display: block;
-        text-align: left;
 	}
 body {  
 
@@ -57,7 +55,6 @@ body {
         background-repeat: no-repeat, no-repeat, repeat-y;
 	margin: 0 auto;
         color: #aa8;
-        text-align: center;
         width: 918px;
 }
 b, strong {
@@ -104,8 +101,88 @@ body>section {
   */      
 }
 
+/* Wordpress Stuff */
+
+.alignleft,.alignright,.aligncenter,
+.size-large, .size-medium, .size-thumbnail {
+    margin: 4px 8px;
+    padding: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px #442;
+}
+        
+.alignleft {
+    float: left;
+    margin: 2px 10px 6px 2px;
+    clear: left;
+}        
+.alignright {
+    float: right;    
+    margin: 2px 2px 6px 10px;
+    clear: right;
+
+}
+        
+.aligncenter {
+  text-align: center;
+  margin: 2px auto;
+}
+
+div.aligncenter {
+  background: #242018;
+  margin: 8px;
+    box-shadow: 0px 0px 8px #000;
+  border-top: 1px solid #442;
+  border-right: 2px solid #331;
+  border-left: 2px solid #331;
+  border-bottom: 2px solid #000;
+}
+div.aligncenter img {
+    box-shadow: 0px 0px 8px #000;
+  margin: 4px;
+}
+
+span.more {
+  text-size: 9px;
+}
+
+p.wp-caption-text {
+    font-size: 9px;
+    text-align: center;
+}
 
 
+a.buttonize {
+  background: #242018;
+  margin: 4px;
+  padding: 2px;
+  box-shadow: 0px 0px 8px #331;
+  border: 1px solid #331;
+  border-radius: 10px;
+   text-shadow: -1px 0px 8px #dc5;
+  display: inline-block;
+}
+a.buttonize:hover {
+  box-shadow: 0px 0px 8px #552;
+}
+a.buttonize span {
+  display: inline-block;
+  color: #000;
+  background: #9f811f;
+  margin: 2px;
+  padding: 1px 8px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0px 0px 6px #000;
+  border: 1px solid #552;
+}
+a.buttonize:hover span, a.buttonize:focus span {
+  background: #9f811f url('images/form_background.png') repeat-x center top;
+  text-decoration: none;
+  border: 1px solid #dc5;
+  box-shadow: 0px 0px 6px #552;
+  color: #000;
+}
 
 /* == FRONT PAGE SOCIAL MEDIA == */
 
@@ -153,6 +230,44 @@ a#home-social-flickr {
 }
 a#home-social-tribe {
     background: url('images/DS_icons/64x64/tribe.png') center center;
+}
+
+
+.widget #home-social {
+    margin: 0 2px;
+    padding: 4px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+.widget a.home-social-button {
+    height: 32px;
+    width: 32px;
+    margin-left: 6px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px #000;
+}
+.widget a.home-social-button:hover {
+    opacity:1.0;
+    box-shadow: 0px 0px 4px #982;
+}
+
+.widget a#home-social-facebook {
+    background: url('images/DS_icons/32x32/facebook.png') center center;
+}
+.widget a#home-social-yahoo {
+    background: url('images/DS_icons/32x32/yahoo.png') center center;
+}
+.widget a#home-social-twitter {
+    background: url('images/DS_icons/32x32/twitter.png') center center;
+}
+.widget a#home-social-rss {
+    background: url('images/DS_icons/32x32/RSS.png') center center;
+}
+.widget a#home-social-flickr {
+    background: url('images/DS_icons/32x32/flickr.png') center center;
+}
+.widget a#home-social-tribe {
+    background: url('images/DS_icons/32x32/tribe.png') center center;
 }
 
 
@@ -249,7 +364,7 @@ body>section h1 {
 body>section h2 {
     font-size: 16px;
     color: #fff;
-    margin: 10px 0px 0px 0px;
+    margin: 20px 0px 5px 0px;
     padding: 0px;
 }
 h2.widgettitle {
@@ -267,55 +382,39 @@ h2.widgettitle {
     box-shadow: -2px -2px 4px #000;  
 }
 
-        
-img.alignright {
-    background: #000;
-    float: right;
-    padding: 1px;    
-    border: 1px solid #420;
-    margin: 0 0 4px 4px;
-    clear: both;
-
-}        
-        
 
 /* == NAVIGATION == */
 
 nav {
-	text-align: center;
-	clear: both;
 	}
 body>nav {
 	padding: 10px 0;
-        margin: 0 auto 50px auto;
-        height: 30px;
-        overflow: hidden;
+    margin: 0 auto 50px auto;
+    height: 30px;
+    overflow: hidden;
+	text-align: center;
+    font-family: 'NeuropolXFree';
+    font-size: 18px;
+	overflow: hidden;
 	}
 	body>nav ul {
-		text-align: left;
-		margin: 0 0 0 20px;
+	    display: inline-block;
+		text-align: center;
+		margin: 0 auto 0 auto;
+		padding-right: 4px;
 		}
 		body>nav li {
-			margin-left: 20px;
+			margin-left: 5px;
 			font-weight: bold;
-			display: inline;
+			display: inline; ;
 			}
 
     
 
-body>nav {
-    font-family: 'NeuropolXFree';
-    font-size: 18px;
-	overflow: hidden;
-	float: left;
-    font-weight: bold;
-}
-        
 body>nav a, body>nav a:visited {
-    display: block;
-    float: left;
-    padding: 2px 4px;
-    margin: 7px 15px 2px 10px;
+    display: inline-block;
+    padding: 2px 4px 0px 4px;
+    margin: 7px 5px 2px 5px;
     background: #242018;
     background: transparent;
     border-radius: 5px;
@@ -524,17 +623,21 @@ ul#footer-site-map  li li a {
 
 /* == Forms == */
 
-input {
+form {
+  margin: 4px 2px;
+}
+
+input, textarea {
   font-weight: normal;
   font-size: 14px;
   background: #9f811f;
   border: 1px solid #420;
-  padding: 4px 2px;
+  padding: 4px 8px;
     border-radius: 4px;
     box-shadow: 0px 0px 8px #000;
 }
-input:hover, input:focus {
-  background: #9f811f url('images/form_background.png') repeat-x center top;
+input:hover, input:focus, textarea:hover, textarea:focus {
+  background: #a4882c url('images/form_background.png') repeat-x center top;
     text-shadow: #af9f69 1px 1px;
     box-shadow: 0px 0px 8px #ba8;
 }
@@ -583,6 +686,10 @@ span.day span {    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 a:hover span.day {
     color: #fff;
     box-shadow: 0px 0px 8px #9f811f;
+}
+div.postmeta {
+    text-align: right;
+    font-size: 11px;
 }
 
 nav p.pageturn {
@@ -689,4 +796,48 @@ table.tribe-events-calendar {
 /* Newsletter Overrides */
 .newsletter p {
   display: inline;
+}
+
+/*slickr flickr overrides */
+.slickr-flickr-gallery ul li a {
+text-decoration: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0.6;
+}
+.slickr-flickr-gallery ul li a:hover {
+  opacity: 1.0;
+}
+
+.slickr-flickr-gallery ul li a:hover img {
+text-decoration: none;
+  box-shadow: 0px 0px 8px #552;
+}
+
+
+.slickr-flickr-gallery img {
+  margin: 2px;
+  padding: 0px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px #000;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #331;
+  border-left: 1px solid #331;
+}
+
+.slickr-flickr-gallery ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slickr-flickr-gallery ul li {
+  margin: 1px;
+  border: 0px;
+}
+
+.slickr-flickr-gallery {
+  padding: 0px;
+  padding-bottom: 10px;
 }

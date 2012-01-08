@@ -61,7 +61,7 @@ Template Name: HomePage
 	  return str_replace("_"," ",$string);
 	}
 	$grid_buttons = array (
-	  "about_apo" => "http://",
+	  "the_festival" => "/the-apogaea-festival/",
 	  "community" => "http://",
 	  "participate" => "http://",
 	  "prepare" => "http://",

@@ -6,7 +6,7 @@
 			<article id="post-<?php the_ID(); ?>">
 				<header>
 					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-					<p>Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></p>
+					<div class="postmeta">Categories: <?php the_category(', '); ?> Tags: <?php the_tags('Tagged: ', ', ', '&bull;'); ?><br />Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></div>
 				</header>
 				<section>
 					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
