@@ -87,6 +87,7 @@ Template Name: HomePage
 <a target="_blank" href="<?php bloginfo('comments_rss2_url'); ?>" class="home-social-button" id="home-social-rss" alt="RSS" title="RSS"><span>RSS</span></a>
 <a target="_blank" href="http://www.flickr.com/groups/apogaea/" class="home-social-button" id="home-social-flickr" alt="Flickr" title="Flickr"><span>Flickr</span></a>
 <a target="_blank" href="http://apogaea.tribe.net/" class="home-social-button" id="home-social-tribe" alt="Tribe" title="Tribe"><span>Tribe</span></a>
+<a                 href="/apo-org/contact-us/" class="home-social-button" id="home-social-email" alt="Email US Directly" title="Email US Directly"><span>Email</span></a>
 <div style="clear: left"></div>
 </div>
 </article>

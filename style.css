@@ -189,17 +189,16 @@ a.buttonize:hover span, a.buttonize:focus span {
 #home-social {
     text-align: center;
     background: #242018;
-    margin: 20px 0 5px 5px;
-    padding: 10px;
+    margin: 20px 0 5px 0px;
+    padding: 10px 0px;
     border-radius: 15px;
     box-shadow: 0px 0px 8px #000;
 }
 a.home-social-button {
-    display: block;
+    display: inline-block;
     height: 64px;
     width: 64px;
-    float: left;
-    margin-left: 21px;
+    margin: 0px 2px;
     border-radius: 5px;
     opacity:0.6;
     box-shadow: 0px 0px 8px #000;
@@ -231,18 +230,26 @@ a#home-social-flickr {
 a#home-social-tribe {
     background: url('images/DS_icons/64x64/tribe.png') center center;
 }
+a#home-social-email {
+    background: url('images/DS_icons/64x64/email.png') center center;
+}
 
+.daysleft {
+    text-align: center;
+    display: block;
+    margin-bottom: 4px;
+}
 
 .widget #home-social {
-    margin: 0 2px;
-    padding: 4px;
+    margin: 0;
+    padding: 4px 0px;
     border-radius: 10px;
     box-shadow: none;
 }
 .widget a.home-social-button {
     height: 32px;
     width: 32px;
-    margin-left: 6px;
+    margin: 0px 0px;
     border-radius: 5px;
     box-shadow: 0px 0px 4px #000;
 }
@@ -268,6 +275,9 @@ a#home-social-tribe {
 }
 .widget a#home-social-tribe {
     background: url('images/DS_icons/32x32/tribe.png') center center;
+}
+.widget a#home-social-email {
+    background: url('images/DS_icons/32x32/email.png') center center;
 }
 
 
@@ -840,4 +850,60 @@ text-decoration: none;
 .slickr-flickr-gallery {
   padding: 0px;
   padding-bottom: 10px;
+}
+
+/* Ignition Stuff */
+
+div.ignition-members {
+  margin: 0px;
+  padding: 0px;
+  clear: all;
+}
+div.ignition-member {
+    font-family: 'NeuropolXFree';
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 0px 10px 3px;
+    background: #242018;
+    border-radius: 15px;
+    font-weight: bold;
+    color: #fff;
+}
+div.ignition-members a {
+  display: block;
+  padding: 0px;
+  margin: 6px;
+  border: 0px;
+  width: 78px;
+  height: 120px;
+}
+div.ignition-members a span.outter {
+  padding: 0px;
+  display:block;
+  text-align: right;
+}
+div.ignition-members a span.pic {
+  background: url('images/missing.png') center center;
+  margin: 1px 0px 8px 1px;
+  padding: 0px;
+  display:block;
+  height: 75px;
+  width: 75px;  
+  
+  text-align: right;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px #000;
+  border: 1px solid #000;
+  
+  
+
+  border: 1px solid #000;
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px #000;  
+}
+
+div.ignition-members a:hover span.pic {
+  border: 1px solid #ba8;
+    box-shadow: 0px 0px 8px #ba8;
 }

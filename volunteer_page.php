@@ -5,17 +5,18 @@ Template Name: volunteer_page
 ?>
 
 
-<?php
-get_header();
-?>
 
-<?php if (have_posts()) : the_post(); ?>
-<div class="post" id="post-<?php the_ID(); ?>">
-	<h2><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-	<div class="meta"><?php edit_post_link(__('Edit This'),''); ?></div>
+<?php get_header(); ?>
 
-	<div class="entry">
-		<?php the_content(__('(more...)')); ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+		<section>
+			<article id="post-<?php the_ID(); ?>">
+				<header>
+					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+				</header>
+				<section>
+					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
 
 	<?php
 		$pages = get_pages('child_of='.get_the_ID());
@@ -28,12 +29,25 @@ get_header();
 		</p>
 	       	<?php
 		}
-	?>
+	?>					
+					
+				</section>
+				<footer>
+					<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
+				</footer>
+			</article>
+		</section>
 
-	</div>
-</div>
-<?php endif; ?>
+	<?php endwhile; else: ?>
 
+		<section>
+			<article>
+				<p>Sorry, no posts matched your criteria.</p>
+			</article>
+		</section>
 
+	<?php endif; ?>
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
