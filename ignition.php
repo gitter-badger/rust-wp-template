@@ -40,14 +40,14 @@ function get_people($category_name) {
 <h1>Board Members</h1>
 	<?php get_people('board-members'); ?>					
 					
-<h1>Regional Burning Man Representatives</h1>
-	<?php get_people('regional-burning-man-reps'); ?>					
+<h1>Event Leads</h1>
+	<?php get_people('event-leads'); ?>					
 					
 <h1>Territorial Ambassadors</h1>
 	<?php get_people('territorial-ambassadors'); ?>	
 					
-<h1>Event Leads</h1>
-	<?php get_people('event-leads'); ?>					
+<h1>Regional Burning Man Representatives</h1>
+	<?php get_people('regional-burning-man-reps'); ?>					
 					
 					
 				</section>

@@ -371,6 +371,8 @@ body>section h1 {
     font-size: 24px;
     font-family: 'NeuropolXFree';
 }
+
+
 body>section h2 {
     font-size: 16px;
     color: #fff;
@@ -379,13 +381,12 @@ body>section h2 {
 }
 h2.widgettitle {
     font-family: 'NeuropolXFree';
-    font-size: 12px;
+    font-size: 16px;
     margin: 5px 0px 15px 0px;
     padding: 6px;
     text-align: center;
     background-color: #181000;
-    color: #cfa728;
-    color: #fff;
+    color: #e57120;
     border-radius: 10px;
     border-bottom: 1px solid #662;
     border-right: 2px solid #662;
@@ -860,11 +861,11 @@ div.ignition-members {
   clear: all;
 }
 div.ignition-member {
-    font-family: 'NeuropolXFree';
     font-size: 12px;
+    line-height: 0.9em;
     display: inline-block;
     vertical-align: top;
-    margin: 0px 0px 10px 3px;
+    margin: 0px 2px 10px 3px;
     background: #242018;
     border-radius: 15px;
     font-weight: bold;
@@ -875,8 +876,8 @@ div.ignition-members a {
   padding: 0px;
   margin: 6px;
   border: 0px;
-  width: 78px;
-  height: 120px;
+  width: 88px;
+  height: 130px;
 }
 div.ignition-members a span.outter {
   padding: 0px;
@@ -885,11 +886,11 @@ div.ignition-members a span.outter {
 }
 div.ignition-members a span.pic {
   background: url('images/missing.png') center center;
-  margin: 1px 0px 8px 1px;
+  margin: 1px 0px 4px 1px;
   padding: 0px;
   display:block;
-  height: 75px;
-  width: 75px;  
+  height: 85px;
+  width: 85px;  
   
   text-align: right;
     border-radius: 15px;
