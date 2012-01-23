@@ -12,6 +12,12 @@ if (function_exists('register_sidebar')) {
 		'before_title' => '<h2 class="widgettitle">',
 		'after_title' => '</h2>',
 	));	
+	register_sidebar(array('name'=>'sidebar_default',
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h2 class="widgettitle">',
+		'after_title' => '</h2>',
+	));		
 	register_sidebar(array('name'=>'sidebar_about_festival',
 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
 		'after_widget' => '</li>',
@@ -24,6 +30,12 @@ if (function_exists('register_sidebar')) {
 		'before_title' => '<h2 class="widgettitle">',
 		'after_title' => '</h2>',
 	));	
+	register_sidebar(array('name'=>'sidebar_ignition_page',
+		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h2 class="widgettitle">',
+		'after_title' => '</h2>',
+	));
 }
 
 // This theme uses wp_nav_menu() in one location.

@@ -5,20 +5,25 @@ Template Name: ignition_page
 ?>
 
 <?php
-function get_people($category_name) {
-    echo '<div class="ignition-members">';
-	$recent_posts = wp_get_recent_posts('category_name='.$category_name.'&numberposts=1000'); 
-	foreach( $recent_posts as $recent ){
-		if ($pic = catch_that_image($recent["post_content"])) {
-		  $pic_style = ' style="background: url(\''.$pic.'\') center center" ';  
-		} else {  $pic_style = ""; }
-		echo '<div class="ignition-member">';
-		echo '<a href="' . get_permalink($recent["ID"]) . '" title="Look '.$recent["post_title"].'" >';
-		echo '<span class="outter"><span class="pic" '.$pic_style.'>';
-		echo '</span>' .   str_replace(' ','<br />',$recent["post_title"]).'</span>';
-		echo '</a> </div> ';
-	}
-    echo "</div>";
+function get_people($grouptag) {
+	if ($pages = get_pages( array('meta_key' => 'is_'.$grouptag, 'child_of' => get_the_ID()) )) {
+	
+        echo '<div class="ignition-members">';
+	    foreach($pages as $page)  {
+	        $ignition_title = get_post_meta($page->ID, 'ignition-title', true);
+		    if ($pic = catch_that_image($page->post_content)) {
+		      $pic_style = ' style="background: url(\''.$pic.'\') center center" ';  
+		    } else {  $pic_style = ""; }
+		
+
+		    echo '<div class="ignition-member">';
+		    echo '<a href="' . get_permalink($page->ID) . '" title="'.$page->post_title.'" >';
+		    echo '<span class="outter"><span class="pic" '.$pic_style.'>';
+		    echo '</span>' .   str_replace(' ',' ',$page->post_title).'<br /><br /><span class="ignition-title">'.$ignition_title.'</span></span>';
+		    echo '</a> </div> ';
+	    }
+        echo "</div>";
+    }
 } 
 ?>
 
@@ -35,10 +40,10 @@ function get_people($category_name) {
 					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
 
 <h1>Officers</h1>
-	<?php get_people('board-officers'); ?>					
+	<?php get_people('officers'); ?>					
 
 <h1>Board Members</h1>
-	<?php get_people('board-members'); ?>					
+	<?php get_people('board-of-directors'); ?>					
 					
 <h1>Event Leads</h1>
 	<?php get_people('event-leads'); ?>					
@@ -47,7 +52,7 @@ function get_people($category_name) {
 	<?php get_people('territorial-ambassadors'); ?>	
 					
 <h1>Regional Burning Man Representatives</h1>
-	<?php get_people('regional-burning-man-reps'); ?>					
+	<?php get_people('regional-burning-man-representatives'); ?>					
 					
 					
 				</section>

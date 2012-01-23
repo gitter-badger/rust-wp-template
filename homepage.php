@@ -62,11 +62,11 @@ Template Name: HomePage
 	}
 	$grid_buttons = array (
 	  "the_festival" => "/the-apogaea-festival/",
-	  "community" => "http://",
-	  "participate" => "http://",
-	  "prepare" => "http://",
-	  "people" => "http://",
-	  "archives" => "http://",
+	  "art, camps, & things" => "/art-camp-things/",
+	  "participate" => "/participate/",
+	  "prepare" => "/the-apogaea-festival/survival-guide-2012/",
+	  "ignition!" => "/apo-org/ignition/",
+	  "archives" => "/the-apogaea-festival/the-apo-archives/",
 	);
 
 	foreach ($grid_buttons as $name => $link) { ?>

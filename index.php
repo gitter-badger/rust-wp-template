@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php /* $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; query_posts("posts_per_page=14&category_name=outpost-news&paged=$paged&showposts=0"); */ ?>
+
 		<section>
 		    <?php 
 			    $posted_sticky_header = false;
@@ -13,12 +15,12 @@
                 //Displaying Headings...
                 if (is_sticky()) {  
                   if (!$posted_sticky_header) {
-                      echo '<article id="sticky"><header><h1 class="month">Highlighted Posts<span>, the need to know info</span></h1></header>';
+                      echo '<article id="sticky"><header><h1 class="month">Priority Transmissions<span>, the need to know info</span></h1></header>';
                       $posted_sticky_header = true;
                   }
                 } else if (!$posted_othernews_header) {                  
                     if ($posted_sticky_header) { echo "</article><hr />";}
-                    echo '<article id="other-news"><header><h1 class="month">Outpost Steam</span><span>, all the news</span></h1></header>';
+                    echo '<article id="other-news"><header><h1 class="month">Outpost NewS</span><span>, all the news</span></h1></header>';
                     $posted_othernews_header = true;
                 }
                 ?> 
