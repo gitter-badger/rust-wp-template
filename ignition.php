@@ -11,6 +11,7 @@ function get_people($grouptag) {
         echo '<div class="ignition-members">';
 	    foreach($pages as $page)  {
 	        $ignition_title = get_post_meta($page->ID, 'ignition-title', true);
+	        if ($ignition_title != "") {$ignition_title = ' <span class="ignition-title">'.$ignition_title.'</span>';}
 		    if ($pic = catch_that_image($page->post_content)) {
 		      $pic_style = ' style="background: url(\''.$pic.'\') center center" ';  
 		    } else {  $pic_style = ""; }
@@ -19,7 +20,7 @@ function get_people($grouptag) {
 		    echo '<div class="ignition-member">';
 		    echo '<a href="' . get_permalink($page->ID) . '" title="'.$page->post_title.'" >';
 		    echo '<span class="outter"><span class="pic" '.$pic_style.'>';
-		    echo '</span>' .   str_replace(' ',' ',$page->post_title).'<br /><br /><span class="ignition-title">'.$ignition_title.'</span></span>';
+		    echo '</span>' .   $ignition_title . str_replace(' ',' ',$page->post_title).'</span>';
 		    echo '</a> </div> ';
 	    }
         echo "</div>";

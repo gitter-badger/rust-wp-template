@@ -14,13 +14,13 @@
                 <?php
                 //Displaying Headings...
                 if (is_sticky()) {  
-                  if (!$posted_sticky_header) {
-                      echo '<article id="sticky"><header><h1 class="month">Priority Transmissions<span>, the need to know info</span></h1></header>';
+                  if (!$posted_sticky_header and (get_query_var('paged') <= 1)) {
+                      echo '<article id="sticky"><header><h1 class="month">Priority Transmissions<span>, need to know info</span></h1></header>';
                       $posted_sticky_header = true;
                   }
                 } else if (!$posted_othernews_header) {                  
                     if ($posted_sticky_header) { echo "</article><hr />";}
-                    echo '<article id="other-news"><header><h1 class="month">Outpost NewS</span><span>, all the news</span></h1></header>';
+                    echo '<article id="other-news"><header><h1 class="month">Outpost News</span><span>, all the news</span></h1></header>';
                     $posted_othernews_header = true;
                 }
                 ?> 
@@ -42,7 +42,7 @@
 			</article>
                 
 			<nav>
-                                <p class="pageturn"><span><?php previous_posts_link(); ?></span><?php next_posts_link(); ?></p>
+                                <p class="pageturn"><span class="pleft"><?php previous_posts_link(); ?></span> <span class="pright"><?php next_posts_link(); ?></span><div class="pindex"></div></p>
                                 
                                 <?php wp_link_pages(); ?>
 			</nav>

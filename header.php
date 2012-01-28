@@ -41,8 +41,20 @@
 			<h2><span><?php bloginfo('description'); ?></span></h2>
 		</header>
 		<nav>
-			<ul>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				<?php /* wp_list_pages('title_li='); */ ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			
+			<div class="subnav">
+			<ul style="clear: both">	
+				<?php 
+				if ($post->post_parent)	{
+	              $ancestors=get_post_ancestors($post->ID);
+	              $root=count($ancestors)-1;
+	              $parent = $ancestors[$root];
+                } else {
+                  $parent = $post->ID;
+                }				
+				wp_list_pages("title_li=&child_of=". $parent ."&echo=1&depth=1"); ?>
 			</ul>
+			</div>
+				
 		</nav>

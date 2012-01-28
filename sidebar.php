@@ -17,8 +17,11 @@
               
             } else if(is_page('the-apogaea-festival')) {
               !dynamic_sidebar('sidebar_about_festival');
+              
+            } else if(is_home()) {
+              !dynamic_sidebar('sidebar_outpost_news');
                
-            } else if(is_page('ignition')) {
+            } else if(is_page('ignition') or is_page('apo-org')) {
               !dynamic_sidebar('sidebar_ignition_page');
                 
             } else {!dynamic_sidebar('sidebar_default'); }

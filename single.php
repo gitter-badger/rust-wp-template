@@ -5,8 +5,9 @@
 		<section>
 			<article id="post-<?php the_ID(); ?>">
 				<header>
-					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-					<div class="postmeta">Categories: <?php the_category(', '); ?> Tags: <?php the_tags('Tagged: ', ', ', '&bull;'); ?><br />Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></div>
+					<h1><a href="/outpost-news/" rel="bookmark" title="Permanent Link to Outpost News">Outpost News Transmission</a></h1>
+					<h2 class="transmission"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+					<div class="postmeta">Categories: <?php the_category(', '); ?> Tags: <?php the_tags('Tagged: ', ', ', '&bull;'); ?><br />Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></div></h2>
 				</header>
 				<section>
 					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
@@ -45,7 +46,7 @@
 			<?php comments_template(); ?>
 
 			<nav>
-				<p><?php previous_post_link(); ?> &bull; <?php next_post_link(); ?></p>
+				<p class="pageturn"><span class="pleft"><?php previous_post_link(); ?></span> <span class="pright"><?php next_post_link(); ?></span><span class="pindex"><a href="/outpost-news/">Outpost News Index</a></span></p>
 			</nav>
 		</section>
 
