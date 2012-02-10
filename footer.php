@@ -2,7 +2,8 @@
                     
                     
 <div id="footer-floater">
-<a href="/" class="buttonize"><span>Jump To The Front Page</span></a><br />
+<a href="/" class="buttonize"><span>Apogaea.com Home Page</span></a><br />
+<a href="http://volunteer.apogaea.com/" class="buttonize"><span>Volunteer Signup Database</span></a><br />
 <a href="http://wiki.apogaea.com" class="buttonize"><span>Ignition Wiki (auth required)</span></a>
 </div>
 
@@ -37,11 +38,27 @@ wp_list_bookmarks(array('title_li' => '', 'categorize' => false));
 </ul>
 
 
-<p style="text-align: center;" class="fancy"><small>&copy; <?= date('Y'); ?> Apogaea &bull; Graphic design by <a href="/apo-org/ignition/jason-kemo-santiago/">Kemo</a> &bull; Special thanks to all our volunteers!</small></p>
+<p style="text-align: center;" class="fancy"><small>&copy; <?= date('Y'); ?> Apogaea &bull; Graphic design by <a href="/apo-org/ignition/jason-kemo-santiago/">Kemo</a> &bull; Volunteer Database by <a href="/apo-org/ignition/bug-barbeque/">Bug</a> &bull; Wordpress Theme by <a href="/apo-org/ignition/scott-koda-dudley/">Koda</a> <br /> Special thanks to all our volunteers! &bull;  Flame On Flaming Art!</p>
+<p style="text-align: center;"><small>Problems? Notify the <a href="mailto:webmonkeys@apogaea.com">webmonkeys@apogaea.com</a></small></p>
 
 
 		<?php wp_footer(); ?>
 
     </footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2432342-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>    
+    
   </body>
 </html>

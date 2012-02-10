@@ -20,8 +20,6 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 
-
-
 		<?php
 
     			wp_deregister_script( 'jquery' );
@@ -44,17 +42,29 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			
 			<div class="subnav">
+			<?php
+			
+				if (is_front_page()) {
+				  echo "<span class=\"menunote\">We invite you to join us this June for Apgoaea 2012: The Spiral...  <span>";
+				} else {
+				?>
 			<ul style="clear: both">	
 				<?php 
-				if ($post->post_parent)	{
-	              $ancestors=get_post_ancestors($post->ID);
-	              $root=count($ancestors)-1;
-	              $parent = $ancestors[$root];
-                } else {
-                  $parent = $post->ID;
-                }				
-				wp_list_pages("title_li=&child_of=". $parent ."&echo=1&depth=1"); ?>
+				  if (is_home()) {
+                    $parent = 2014;
+				  } else if ($post->post_parent)	{
+	                $ancestors=get_post_ancestors($post->ID);
+	                $root=count($ancestors)-1;
+	                $parent = $ancestors[$root];
+                  } else {
+                    $parent = $post->ID;
+                  }
+                  wp_list_pages("title_li=&child_of=". $parent ."&echo=1&depth=1");
+                  ?>
 			</ul>
 			</div>
+			<?php
+                }  
+               ?>
 				
 		</nav>

@@ -18,18 +18,16 @@ Template Name: volunteer_page
 				<section>
 					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
 
+    <ul>
 	<?php
 		$pages = get_pages('child_of='.get_the_ID());
 		foreach($pages as $page)  {
         	?>
-		<hr />
-		<h2><a href="<?php echo get_page_link($page->ID) ?>"><?php echo $page->post_title ?>:</a></h2>
-		<p>
-		<?php echo $page->post_content ?>
-		</p>
+		<li><b><a href="<?php echo get_page_link($page->ID) ?>"><?php echo $page->post_title ?>:</a></b> <?php echo $page->post_content ?></li>
 	       	<?php
 		}
-	?>					
+	?>	
+	</ul>				
 					
 				</section>
 				<footer>
