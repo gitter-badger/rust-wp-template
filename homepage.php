@@ -28,7 +28,7 @@ Template Name: HomePage
 	}
 	$grid_buttons = array (
 	  "the_festival" => "/the-apogaea-festival/",
-	  "art, camps<br />& things" => "/art-camp-things/",
+	  "art, camps<br />& things" => "/art-camps-things/",
 	  "participate" => "/participate/",
 	  "prepare" => "/the-apogaea-festival/survival-guide-2012/",
 	  "ignition!" => "/apo-org/ignition/",
