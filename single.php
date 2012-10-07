@@ -5,15 +5,16 @@
 		<section>
 			<article id="post-<?php the_ID(); ?>">
 				<header>
-					<h1><a href="/outpost-news/" rel="bookmark" title="Permanent Link to Outpost News">Outpost News Transmission</a></h1>
-					<h2 class="transmission"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-					<div class="postmeta">Categories: <?php the_category(', '); ?> Tags: <?php the_tags('Tagged: ', ', ', '&bull;'); ?><br />Posted on <?php the_time('F jS, Y'); ?> by <?php the_author(); ?></div></h2>
+					<h1><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+				<h2 class="transmission">Posted  by <?php the_author(); ?> on <?php the_time('l, F jS, Y'); ?></h2>
+					
 				</header>
 				<section>
 					<?php the_content('Read more on "'.the_title('', '', false).'" &raquo;'); ?>
 
 				</section>
-				<footer>
+				<footer class="transmission">
+					<div class="postmeta">
 					<?php wp_link_pages(array('before' => '<p><strong>Pages:</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
 					<?php the_tags( '<p>Tags: ', ', ', '</p>'); ?>
 
@@ -38,7 +39,7 @@
 							Both comments and pings are currently closed.
 
 						<?php } edit_post_link('Edit this entry','','.'); ?>
-
+</div>
 					</p>
 				</footer>
 			</article>

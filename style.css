@@ -81,7 +81,13 @@ header {
 }
     
 
-
+div#container {
+        width: 560px;
+	float: left;
+	clear: none;
+        margin: 10px 0px 10px 25px;
+        padding: 0px 0px;
+}
 body>section {
         width: 560px;
 	float: left;
@@ -381,16 +387,10 @@ body>section h2 {
 }
 h2.transmission {
     font-family: 'NeuropolXFree';
-    font-size: 16px;
-    margin: 15px 0px 15px 0px;
+    font-size: 12px;
+    margin: 2px 0px 15px 0px;
     padding: 6px;
-    text-align: center;
-    background-color: #181000;
-    color: #e57120;
-    border-radius: 10px;
-    border-bottom: 1px solid #662;
-    border-left: 2px solid #662;
-    box-shadow: -2px -2px 4px #000;
+    text-align: right;
 }
 h2.widgettitle {
     font-family: 'NeuropolXFree';
@@ -645,7 +645,10 @@ body>footer {
     margin: 0px 0px 20px 0px;
     width: 920px; /* This should be 918, but in Chromium this causing a rendering issue */
 }
-
+footer.transmission {
+    border-radius: 10px;
+    border-top: 1px solid #662;
+}
 
 ul#footer-site-map {
   display: block;
@@ -797,12 +800,7 @@ nav p.pageturn {
     font-size: 12px;
     margin: 15px 0px 15px 0px;
     padding: 10px;
-    background-color: #181000;
     color: #e57120;
-    border-radius: 10px;
-    border-bottom: 1px solid #662;
-    border-left: 2px solid #662;
-    box-shadow: -2px -2px 4px #000;
 }
 nav p.pageturn span.pleft {
     display: inline-block;
