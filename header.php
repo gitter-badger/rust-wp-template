@@ -45,7 +45,7 @@
 			<?php
 			
 				if (is_front_page()) {
-				  echo "<span class=\"menunote\">We invite you to join us this June for Apgoaea 2012: The Spiral...  <span>";
+				  echo "<span class=\"menunote\">We invite you to join us this June for Apgoaea 2013<span>";
 				} else {
 				?>
 			<ul style="clear: both">	
