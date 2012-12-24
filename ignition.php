@@ -49,8 +49,6 @@ function get_people($grouptag) {
 <h1>Event Leads</h1>
 	<?php get_people('event-leads'); ?>					
 					
-<h1>Territorial Ambassadors</h1>
-	<?php get_people('territorial-ambassadors'); ?>	
 					
 <h1>Regional Burning Man Representatives</h1>
 	<?php get_people('regional-burning-man-representatives'); ?>					

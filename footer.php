@@ -4,7 +4,7 @@
 <div id="footer-floater">
 <a href="/" class="buttonize"><span>Apogaea.com Home Page</span></a><br />
 <a href="http://volunteer.apogaea.com/" class="buttonize"><span>Volunteer Signup Database</span></a><br />
-<a href="http://wiki.apogaea.com" class="buttonize"><span>Ignition Wiki (auth required)</span></a>
+<a href="http://wiki.apogaea.com" class="buttonize"><span>KITTYbase (auth required)</span></a>
 </div>
 
 
@@ -39,9 +39,11 @@ wp_list_bookmarks(array('title_li' => '', 'categorize' => false));
 
 
 <p style="text-align: center;" class="fancy"><small>&copy; <?= date('Y'); ?> Apogaea &bull; Graphic design by <a href="/apo-org/ignition/jason-kemo-santiago/">Kemo</a> &bull; Volunteer Database by <a href="/apo-org/ignition/bug-barbeque/">Bug</a> &bull; Wordpress Theme by <a href="/apo-org/ignition/scott-koda-dudley/">Koda</a> <br /> Special thanks to all our volunteers! &bull;  Flame On Flaming Art!</p>
+
 <p style="text-align: center;"><small>Problems? Notify the <a href="mailto:webmonkeys@apogaea.com">webmonkeys@apogaea.com</a></small></p>
 
 
+<p style="text-align: center;" class="fancy"><small><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />The Apogaea logo and branding, as well as the fictional character 'Flaming Art' are licensed under:<br /> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</small></p>
 		<?php wp_footer(); ?>
 
     </footer>
@@ -58,7 +60,8 @@ wp_list_bookmarks(array('title_li' => '', 'categorize' => false));
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script>    
+</script>
+    
     
   </body>
 </html>
