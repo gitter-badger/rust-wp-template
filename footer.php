@@ -46,7 +46,38 @@ wp_list_bookmarks(array('title_li' => '', 'categorize' => false));
 <p style="text-align: center;" class="fancy"><small><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a><br />The Apogaea logo and branding, as well as the fictional character 'Flaming Art' are licensed under:<br /> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.</small></p>
 		<?php wp_footer(); ?>
 
+
+    <div style="text-align:center"><img src="<?php bloginfo('template_directory'); ?>/javascript/particle.png"  /></div>
+
     </footer>
+
+    <script src="<?php bloginfo('template_directory'); ?>/javascript/particle.js"></script>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+
+        var emitter = new particle_emitter({
+          image: ['<?php bloginfo('template_directory'); ?>/javascript/particle.png'],
+          center: ['50%','50%'], offset: [0, 0], radius: 0,
+          size: 16, velocity: 80, decay: 1000, rate: 40
+        });
+
+        $(document).mousemove(function(e) { emitter.centerTo(e.pageX, e.pageY);});
+
+        $('header').mouseup(function(e){
+            emitter.start();
+            function stopemit() {
+              emitter.stop();
+            }
+            setTimeout(stopemit, 200);
+
+        }); 
+        
+
+      })
+
+      
+    </script>
 
 <script type="text/javascript">
 
@@ -61,7 +92,6 @@ wp_list_bookmarks(array('title_li' => '', 'categorize' => false));
   })();
 
 </script>
-    
     
   </body>
 </html>

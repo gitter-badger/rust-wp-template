@@ -52,7 +52,7 @@ Template Name: HomePage
 <a target="_blank" href="http://twitter.com/#!/apogaea" class="home-social-button" id="home-social-twitter" alt="Twitter" title="Twitter"><span>Twitter</span></a>
 <a target="_blank" href="http://feeds.feedburner.com/Apogaea" class="home-social-button" id="home-social-rss" alt="RSS" title="RSS"><span>RSS</span></a>
 <a target="_blank" href="http://www.flickr.com/groups/apogaea/" class="home-social-button" id="home-social-flickr" alt="Flickr" title="Flickr"><span>Flickr</span></a>
-<a target="_blank" href="http://apogaea.tribe.net/" class="home-social-button" id="home-social-tribe" alt="Tribe" title="Tribe"><span>Tribe</span></a>
+<a target="_blank" href="https://plus.google.com/communities/117603601914958058403" class="home-social-button" id="home-social-gplus" alt="Google Plus" title="Google Plus"><span>Google+</span></a>
 <a                 href="/apo-org/contact-us/" class="home-social-button" id="home-social-email" alt="Email US Directly" title="Email US Directly"><span>Email</span></a>
 <div style="clear: left"></div>
 </div>

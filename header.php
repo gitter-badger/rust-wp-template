@@ -6,11 +6,14 @@
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
 		<title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<link href="/favicon.ico" rel="icon" type="image/x-icon" />
 
-
+	    <?php  wp_deregister_script( 'jquery' ); 
+    			wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js');
+    			wp_enqueue_script('jquery');
+    	?>
 		<?php wp_head(); ?>
  
-		<?php /* <script src="<?php bloginfo('template_directory'); ?>/javascript/jquery-1.7.min.js"></script>  */ ?>
 
 
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen">
@@ -20,13 +23,6 @@
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 
-		<?php
-
-    			wp_deregister_script( 'jquery' );
-    			wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js');
-    			wp_enqueue_script('jquery');
- 
-		?>
 
 		<script src="<?php bloginfo('template_directory'); ?>/javascript/h5.js"></script>
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/coin-slider-styles.css" media="screen">

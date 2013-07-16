@@ -236,6 +236,9 @@ a#home-social-flickr {
 a#home-social-tribe {
     background: url('images/DS_icons/64x64/tribe.png') center center;
 }
+a#home-social-gplus {
+    background: url('images/DS_icons/64x64/gplus.png') center center;
+}
 a#home-social-email {
     background: url('images/DS_icons/64x64/email.png') center center;
 }
@@ -281,6 +284,9 @@ a#home-social-email {
 }
 .widget a#home-social-tribe {
     background: url('images/DS_icons/32x32/tribe.png') center center;
+}
+.widget a#home-social-gplus {
+    background: url('images/DS_icons/32x32/gplus.png') center center;
 }
 .widget a#home-social-email {
     background: url('images/DS_icons/32x32/email.png') center center;
